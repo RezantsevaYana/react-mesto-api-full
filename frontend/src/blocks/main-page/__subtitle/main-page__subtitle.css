@@ -1,0 +1,14 @@
+.main-page__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.main-page__subtitle:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}

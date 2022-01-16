@@ -1,0 +1,30 @@
+.header__title {
+    border: none;
+    background: transparent;
+    color: white;
+    margin: 6px 0 0 0;
+    height: 22px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.header__title:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+@media screen and (max-width:890px) {
+    .header__title {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .header__title {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

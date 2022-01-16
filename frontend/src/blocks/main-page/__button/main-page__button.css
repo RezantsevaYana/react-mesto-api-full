@@ -1,0 +1,29 @@
+.main-page__button {
+    font-family: "Inter";
+    width: 358px;
+    height: 50px;
+    margin-top: 216px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.main-page__button:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+@media screen and (max-width:400px) {
+    .main-page__button {
+        width: 260px;
+        height: 50px;
+        margin-top: 296px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

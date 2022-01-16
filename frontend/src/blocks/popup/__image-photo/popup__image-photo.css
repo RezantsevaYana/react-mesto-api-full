@@ -1,0 +1,33 @@
+.popup__image-photo {
+    height: 540px;
+    opacity: 1;
+    background-size: cover;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:1115px) {
+    .popup__image-photo  {
+        height: 400px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .popup__image-photo  {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .popup__image-photo  {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .popup__image-photo  {
+        width: 240px;
+        height: auto;
+    }
+}

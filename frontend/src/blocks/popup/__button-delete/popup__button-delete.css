@@ -1,0 +1,10 @@
+.popup__button-delete {
+    font-family: "INTER";
+    margin-top: 0px;
+}
+
+@media screen and (max-width:575px) {
+    .popup__button-delete {
+        margin-top: 0px;
+    }
+}

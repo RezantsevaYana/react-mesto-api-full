@@ -1,0 +1,19 @@
+.main-page__input {
+    height: 27px;
+    width: 358px;
+    font-family: inherit;
+    border: 0;
+    border-bottom: 2px solid rgba(204, 204, 204, 1);
+    background-color:black;
+    color: white;
+}
+
+@media screen and (max-width:400px) {
+    .main-page__input {
+        width: 260px;
+    }
+}
+
+.main-page__input:first-of-type {
+    margin-bottom: 30px;
+}

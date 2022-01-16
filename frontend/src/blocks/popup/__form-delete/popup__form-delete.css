@@ -1,0 +1,9 @@
+.popup__form-delete {
+    margin: 0 36px 36px 36px;
+}
+
+@media screen and (max-width:575px) {
+    .popup__form-delete {
+        margin: 0 22px 0px 22px;
+    }
+}

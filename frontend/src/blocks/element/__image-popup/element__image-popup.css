@@ -1,0 +1,9 @@
+.element__image-popup {
+    border: 0;
+    padding: 0;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.element__image-popup:hover {
+    cursor: pointer;
+}

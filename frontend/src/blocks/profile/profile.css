@@ -1,0 +1,40 @@
+.profile {
+    padding-top: 40px;
+    margin: 0 auto 0;
+    width: 880px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@media screen and (max-width: 910px) {
+    .profile {
+        margin: 0 auto 0;
+        width: 90%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .profile {
+        padding-top: 42px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .profile {
+        padding-top: 42px;
+        width: 282px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}

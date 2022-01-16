@@ -1,0 +1,11 @@
+.popup-info__logo {
+    width: 120px;
+    height: 120px;
+    margin: 60px auto 32px;
+}
+
+@media screen and (max-width:570px) {
+    .popup-info__logo {
+        margin: 50px auto 40px;
+    }
+}

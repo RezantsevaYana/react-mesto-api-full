@@ -1,0 +1,12 @@
+.popup__title-delete {
+    font-family: "INTER";
+    margin: 34px 36px 38px 36px;
+    width: 358px;
+}
+
+@media screen and (max-width:575px) {
+    .popup__title-delete {
+        margin: 34px 29px 38px 29px;
+        width: 225px;
+    }
+}
