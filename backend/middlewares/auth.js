@@ -18,7 +18,7 @@ module.exports = (req, res, next) => {
 
   try {
     // верифицируем токен
-    payload = jwt.verify(token, "some-secret-key");
+    payload = jwt.verify(token, JWT_SECRET);
   } catch (e) {
     next(new AuthError("Ошибка авторизации"));
   }

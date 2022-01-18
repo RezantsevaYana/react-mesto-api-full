@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 // const validator = require("validator");
@@ -19,8 +20,17 @@ const { PORT = 3000 } = process.env;
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
+//console.log(process.env.NODE_ENV);
+
 // подключаем логгер запросов
 app.use(requestLogger);
+
+// краш-тест сервера
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 // роуты не требующие авторизации
 app.post("/signin", celebrate({
@@ -79,4 +89,27 @@ mongoose.connect("mongodb://localhost:27017/mestodb").catch((error) => console.l
 app.listen(PORT, () => {
   // Если всё работает, консоль покажет, какой порт приложение слушает
   console.log(`App listening on port ${PORT}`);
+});
+
+// CORS простые запросы
+app.use(function(req, res, next) {
+  const { origin } = req.headers; // Сохраняем источник запроса в переменную origin
+  // проверяем, что источник запроса есть среди разрешённых
+  if (allowedCors.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', "*");
+  }
+
+  next();
+});
+
+// предварительные запросы
+// Сохраняем тип запроса (HTTP-метод) в соответствующую переменную
+app.use(function(req, res, next) {
+  const { method } = req;
+  const DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE";
+  if (method === 'OPTIONS') {
+    // разрешаем кросс-доменные запросы любых типов (по умолчанию)
+    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
+  }
+  return res.end();
 });

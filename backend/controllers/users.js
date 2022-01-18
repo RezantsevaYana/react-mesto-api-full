@@ -129,7 +129,7 @@ module.exports.login = (req, res, next) => {
           if (!matched) {
             throw new AuthError("Неправильные почта или пароль");
           }
-          const token = jwt.sign({ _id: user._id }, "some-secret-key", { expiresIn: "7d" });
+          const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: "7d" });
           return res.status(200).send({ token });
         });
     })
