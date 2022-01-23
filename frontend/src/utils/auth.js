@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'http://api.rezantseva.nomoredomains.rocks';
 
 // запрос на регистрацию на сервере
 
